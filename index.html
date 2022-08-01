@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Magra:wght@400;700&family=Red+Hat+Text:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="./images/fav_icon_32x32.png">
+    <title>Travel</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="pop-up-container hidden">
+            <div class="pop-up">
+                <h3 class="popup_header">Log in to your account</h3>
+                <h3 class="popup_header hidden">Create account</h3>
+                <div class="popup_sign_in popup_facebook">
+                    <img class="popup_sign_in_icon" src="./images/facebook_sign_in_icon.svg" alt="facbook icon">
+                    Sign In with Facebook
+                </div>
+                <div class="popup_sign_in popup_google">
+                    <img class="popup_icon_google" src="./images/google_sign_in_icon.svg" alt="google icon">
+                    <span class="popup_google_text">Sign In with Google</span>
+                </div>
+                <div class="popup_or_container">
+                    <div class="popup_or"></div>
+                    <div class="popup_or_text">or</div>
+                    <div class="popup_or"></div>
+                </div>
+
+                <div class="popup_form">
+                    <form action="" id="account">
+                        <div class="popup_input_email">
+                            <label class="popup_label" for="email">E-mail</label>
+                            <input type="email" name="email" class="popup_input" required>
+                        </div>
+                        <div class="popup_input_password">
+                            <label class="popup_label" for="password">Password</label>
+                            <input name="password" class="popup_input" type="text" id="password">
+                        </div>
+
+                        <button type="submit" class="popup_sign_in popup_button">
+                            <span class="fade">Sign in</span>
+                        </button>
+                    </form>
+                </div>
+                <a class="popup_forgotlink" href="#">Forgot Your Password?</a>
+                <div class="popup_line"></div>
+                <div class="popup_register">Don’t have an account?
+                    <span id="register" class="popup_forgotlink reg_link &nbsp">Register</span>
+                </div>
+                <div class="popup_register hidden">Already have an account?&nbsp
+                    <span id="log_in" class="popup_forgotlink reg_link">Log in</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-container">
+            <header class="container-header">
+                <div class="status-bar"></div>
+                <div class="header-style">
+                    <a class="logo-link" href="./index.html"></a>
+                    <a class="text-link" href="./index.html">
+                        <!-- <img src="./images/travel_portal_logo.png" alt="travel_portal_logo"> -->
+                        Travel Portal
+                    </a>
+                    <div class="menu-390"></div>
+                    <nav class="nav-container">
+                        <div class="nav-390width close-menu"></div>
+                        <ul class="navigation">
+                            <li class="fade nav-li"><a href="#how_it_works">How It Works</a></li>
+                            <li class="fade nav-li"><a href="#plan_trip">Plan Your Trip</a></li>
+                            <li class="fade nav-li"><a href="#destinations">Destinations</a></li>
+                            <li class="fade nav-li"><a href="#travel_stories">Travel Stories</a></li>
+                            <li class="nav-390width nav-li"><a class="account_menu" href="#">Account</a></li>
+                            <li class="nav-390width nav-li"><a href="#social_media">Social Media</a></li>
+                        </ul>
+                    </nav>
+                    <form id="login-button" class="login" action="">
+                        <button type="button" class="login-text" form="login-button">
+                            <span class="fade">Login</span>
+                        </button>
+                    </form>
+
+
+                </div>
+            </header>
+            <section id="how_it_works" class="preview">
+                <h1 class="explore-h1">Explore the beauty of the World</h1>
+                <p class="explore-p">Receive personalized recommendations for countries, hotels, activities and more
+                </p>
+                <div class="search-input">
+                    <form id="start-plan" action="./index.html">
+                        <input class="input-plan-style" type="text" placeholder="What would you like to do?">
+                        <button class="button-plan" type="submit" form="start-plan"><span class="fade">Start
+                                Planning</span> </button>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <div>
+            <main>
+                <section id="plan_trip" class="steps flex-row-wrap">
+                    <h2 class="flex-row-wrap">3 STEPS TO THE PERFECT TRIP</h2>
+                    <div class="container-steps flex-row-wrap">
+                        <div class="steps-icon flex-row-wrap bicycle-container">
+                            <a href="" class="icon-container flex-row-wrap bicycle--fix">
+                                <!-- <img src="./images/bicycle_icon.png" alt="bicycle_icon"> -->
+                            </a>
+                            <p>Tell us what you want to do</p>
+                        </div>
+                        <div class="steps-icon flex-row-wrap calendar-container">
+                            <a href="" class="icon-container flex-row-wrap calendar-fix">
+                                <!-- <img src="./images/calendar_icon.png" alt="calendar_icon"> -->
+                            </a>
+                            <p>Share us preferable dates</p>
+                        </div>
+                        <div class="steps-icon flex-row-wrap plane-container">
+                            <a href="" class="icon-container flex-row-wrap plane-fix">
+                                <!-- <img src="./images/plane_icon.png" alt="plane_icon"> -->
+                            </a>
+                            <p>We will give you recommendations</p>
+                        </div>
+                    </div>
+                </section>
+                <section id="destinations" class="destinations flex-row-wrap">
+                    <h2>POPULAR DESTINATIONS</h2>
+                    <div class="slider">
+                        <div class="town-container usa-img">
+                            <p class="town-text">USA</p>
+                        </div>
+                        <div class="town-container spain-img">
+                            <p class="town-text">SPAIN</p>
+                        </div>
+                        <div class="town-container japan-img">
+                            <p class="town-text">JAPAN</p>
+                        </div>
+                        <div class="town-container usa-img">
+                            <p class="town-text">USA</p>
+                        </div>
+                        <div class="town-container spain-img">
+                            <p class="town-text">SPAIN</p>
+                        </div>
+                    </div>
+                    <div class="fill-width flex-row-wrap">
+                        <div class="scroll-circles flex-row-wrap">
+                            <div class="color-circle"></div>
+                            <div class="color-circle"></div>
+                            <div class="color-circle"></div>
+                        </div>
+                    </div>
+                    <div class="fill-width flex-row-wrap find-dest">
+                        <form id="find_more" class="find-more" action="./index.html">
+                            <button type="submit" class="find-more-button flex-row-wrap fade" form="find_more">
+                                <img class="arrow-img" src="./images/find_arrow.png" alt="find_arrow">
+                                <span class="find-text">Find More</span>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="arrow-390 left-arrow disable"></div>
+                    <div class="arrow-390 right-arrow"></div>
+                </section>
+                <section id="travel_stories" class="travel flex-row-wrap">
+                    <!-- section stories  -->
+                    <h2 class="fill-width flex-row-wrap section-header">TRAVEL STORIES </h2>
+                    <div class="boat-bg">
+                        <div class="white-bg flex-row-wrap">
+                            <div class="travel-stories flex-row-wrap">
+                                <div class="story-block">
+                                    <div class="story-img thai-img"></div>
+                                    <div class="story-wrapper">
+                                        <h3 class="story-header">10 Photos of Attractive Thailand</h3>
+                                        <div>
+                                            <p class="story-text">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor
+                                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                                quis
+                                                nostrud
+                                                exercitation
+                                                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                                                dolor
+                                                in
+                                                reprehenderit
+                                                in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                                Excepteur
+                                                sint
+                                                occaecat
+                                                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+                                                id
+                                                est
+                                                laborum.Lorem
+                                                ipsum dolor sit amet, consectetur adipiscing elit...
+                                            </p>
+                                            <a href=""><b>Read More</b></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="story-block">
+                                    <div class="story-img uta-img"></div>
+                                    <div class="story-wrapper">
+                                        <h3 class="story-header">Canyonlands National Park, Utah</h3>
+                                        <div>
+                                            <p class="story-text">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor
+                                                incididunt ut
+                                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                                exercitation
+                                                ullamco
+                                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                                                in
+                                                reprehenderit
+                                                in
+                                                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                                                sint
+                                                occaecat
+                                                cupidatat
+                                                non proident, sunt in culpa qui officia deserunt mollit anim id est
+                                                laborum.Lorem
+                                                ipsum
+                                                dolor
+                                                sit amet, consectetur adipiscing elit...
+                                            </p>
+                                            <a href=""><b>Read More</b></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="story-block">
+                                    <div class="story-img mountain-img"></div>
+                                    <div class="story-wrapper">
+                                        <h3 class="story-header">I left my heart in the Mountains!</h3>
+                                        <div>
+                                            <p class="story-text">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor
+                                                incididunt ut
+                                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                                exercitation
+                                                ullamco
+                                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                                                in
+                                                reprehenderit
+                                                in
+                                                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                                                sint
+                                                occaecat
+                                                cupidatat
+                                                non proident, sunt in culpa qui officia deserunt mollit anim id est
+                                                laborum.Lorem
+                                                ipsum
+                                                dolor
+                                                sit amet, consectetur adipiscing elit...
+                                            </p>
+                                            <a href=""><b>Read More</b></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="story-block">
+                                    <div class="story-img journey-img"></div>
+                                    <div class="story-wrapper">
+                                        <h3 class="story-header">The Longest journey in my life!</h3>
+                                        <div>
+                                            <p class="story-text">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor
+                                                incididunt ut
+                                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                                exercitation
+                                                ullamco
+                                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                                                in
+                                                reprehenderit
+                                                in
+                                                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                                                sint
+                                                occaecat
+                                                cupidatat
+                                                non proident, sunt in culpa qui officia deserunt mollit anim id est
+                                                laborum.Lorem
+                                                ipsum
+                                                dolor
+                                                sit amet, consectetur adipiscing elit...
+                                            </p>
+                                            <a href=""><b>Read More</b></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="fill-width flex-row-wrap">
+                                    <form id="see_more" class="find-more" action="./index.html">
+                                        <button type="submit" class="find-more-button flex-row-wrap fade"
+                                            form="see_more">
+                                            <img class="arrow-img" src="./images/find_arrow.png" alt="find_arrow">
+                                            <span class="see-more">See More</span>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <footer class="fill-width flex-row-wrap">
+                            <div class="footer-wrapper flex-row-wrap">
+                                <p class="footer-rights">All Rights Reserved © Travel Portal</p>
+                                <ul id="social_media" class="social-media">
+                                    <li>
+                                        <a href="https://github.com/WhiteeST" target="_blank">
+                                            <div class="footer-media github fade"></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://rs.school/js-stage0" target="_blank">
+                                            <div class="footer-media rs-school fade"></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/c/RollingScopesSchool" target="_blank">
+                                            <div class="footer-media youtube fade"></div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </footer>
+                    </div>
+
+                </section>
+                <script src="./scripts/index.js"></script>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
