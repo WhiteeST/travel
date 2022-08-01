@@ -1,2 +1,2 @@
 deploy : 
-https://rolling-scopes-school.github.io/whiteest/travel
+https://whiteest.github.io/travel/
