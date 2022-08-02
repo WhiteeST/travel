@@ -1,12 +1,12 @@
-console.log('Оценка - 125 баллов',
-    '\nОтзыв по пунктам ТЗ:,',
-    '\nВыполненные пункты:',
-    '\n1) на десктоп варианте при клике на урезанную картинку слева или справа изображение меняется по принципу карусели(например если нажать правую картинку та что была в центре на уезжает налево, а та что была видна наполовину оказывается справа) ',
-    '\n2) Три точки внизу отображают "номер слайда", то есть каждому слайду соответствует свой кружочек, который становится активным при нахождении соответствующего ему слайда в центре. На мобильном варианте картинка одна, но поверх нее появляются стрелочки навигации (можно сделать как карусель или же затемнять кнопку если слайдер достиг края) ',
-    '\n3) Анимации плавного перемещения для слайдера ',
-    '\n4) логин попап соответствует верстке его закрытие происходит при клике вне попапа ',
-    '\n5) логин попап имеет 2 инпута (логин и пароль) при нажатии на кнопку Sign In показывается браузерный алерт с введенными данными (для реализации можно использовать тег) ',
-    '\n6) Нажатие на кнопку Register на Login попапе меняет разметку попапа на разметку Sign Up попапа согласно макету (То есть нажатие не закрывает модал а просто меняет его наполнение) ');
+//console.log('Оценка - 125 баллов',
+    // '\nОтзыв по пунктам ТЗ:,',
+    // '\nВыполненные пункты:',
+    // '\n1) на десктоп варианте при клике на урезанную картинку слева или справа изображение меняется по принципу карусели(например если нажать правую картинку та что была в центре на уезжает налево, а та что была видна наполовину оказывается справа) ',
+    // '\n2) Три точки внизу отображают "номер слайда", то есть каждому слайду соответствует свой кружочек, который становится активным при нахождении соответствующего ему слайда в центре. На мобильном варианте картинка одна, но поверх нее появляются стрелочки навигации (можно сделать как карусель или же затемнять кнопку если слайдер достиг края) ',
+    // '\n3) Анимации плавного перемещения для слайдера ',
+    // '\n4) логин попап соответствует верстке его закрытие происходит при клике вне попапа ',
+    // '\n5) логин попап имеет 2 инпута (логин и пароль) при нажатии на кнопку Sign In показывается браузерный алерт с введенными данными (для реализации можно использовать тег) ',
+    // '\n6) Нажатие на кнопку Register на Login попапе меняет разметку попапа на разметку Sign Up попапа согласно макету (То есть нажатие не закрывает модал а просто меняет его наполнение) ');
 $(document).ready(function () {
     $('body').click(function (event) {
         if ($('.nav-container').hasClass('active')) {
@@ -100,7 +100,7 @@ const registerTogle = () => {
 
 const resize = () => {
     const containerLeft = window.getComputedStyle(document.querySelector('.slider')).left;
-    // console.log(containerLeft);
+    // //console.log(containerLeft);
     if (containerLeft === '390px') {
         cirlce_button.forEach(element => element.classList.remove('bright'));
         cirlce_button[0].classList.add('bright');
@@ -116,7 +116,7 @@ const resize = () => {
 }
 
 accountHandler.addEventListener('click', (event) => {
-    // console.log(event);
+    // //console.log(event);
     popupContainer.classList.toggle('hidden');
     (document.querySelector('body')).classList.toggle('scroll-lock')
 })
@@ -136,7 +136,7 @@ popupButton.addEventListener('click', (event) => {
 })
 
 loginButton.addEventListener('click', (event) => {
-    // console.log(popupContainer, 'and target=', event.target);
+    // //console.log(popupContainer, 'and target=', event.target);
     popupContainer.classList.toggle('hidden');
     (document.querySelector('body')).classList.toggle('scroll-lock')
 })
@@ -179,7 +179,7 @@ arrowsList.forEach(element => {
                 }
             }
             else {
-                // console.log(sliderPosition);
+                // //console.log(sliderPosition);
                 if (sliderPosition === '0px') {
                     sliderContainer.classList.toggle('usa_mid');
                     cirlce_button[2].classList.add('bright');
@@ -200,30 +200,34 @@ arrowsList.forEach(element => {
 
 const clickSlideHandler = () => {
     checkFlagClick = false;
-    console.log('in clickSlideHandler', townID);
+    //console.log('in clickSlideHandler', townID);
     sliderContainer.removeEventListener('click', clickSlideHandler);
     const mediaQuery = window.matchMedia('(max-width: 425px)')
     if (!mediaQuery.matches) {
         moveTown(townID);
     }
     else {
-        console.log('event.target else  =', townID)
+        //console.log('event.target else  =', townID)
         clickTownContainer(townID);
     }
 }
 
 const moveTown = (townID) => {
-    console.log('in moveTown', townID);
+    //console.log('in moveTown', townID);
     if (townID === 3)
         sliderContainer.classList.add('usa_mid')
     else if (townID === 1)
         sliderContainer.classList.add('spain_mid')
+    else {
+        sliderContainer.addEventListener('click', clickSlideHandler);
+        checkFlagClick = true;
+    }
 }
 
 const sliderMoveHandler = (townID) => {
     const townArray = Array.from(document.querySelectorAll('.town-container'));
     const tempTown = townArray[2].cloneNode(true);
-    console.log('in sliderMoveHandler', townID);
+    //console.log('in sliderMoveHandler', townID);
 
     if (townID === 3) {
         townArray.shift();
@@ -232,7 +236,7 @@ const sliderMoveHandler = (townID) => {
         townArray.forEach(element => {
             sliderContainer.appendChild(element);
         })
-        console.log('after2', sliderContainer.classList);
+        //console.log('after2', sliderContainer.classList);
     }
     else if (townID === 1) {
         townArray.pop();
@@ -258,7 +262,7 @@ const sliderMoveHandler = (townID) => {
 
 sliderContainer.addEventListener('click', (event) => {
     if (checkFlagClick) {
-        console.log('in click event', townID);
+        //console.log('in click event', townID);
         const townArray = Array.from(document.querySelectorAll('.town-container'));
         townID = townArray.indexOf(event.target);
     }
@@ -269,7 +273,7 @@ sliderContainer.addEventListener('click', (event) => {
 sliderContainer.addEventListener('click', clickSlideHandler);
 
 sliderContainer.addEventListener('transitionend', (eventTransition) => {
-    console.log('in transitionend event', townID);
+    //console.log('in transitionend event', townID);
     const mediaQuery = window.matchMedia('(max-width: 425px)')
     if (!mediaQuery.matches) {
         sliderMoveHandler(townID);
